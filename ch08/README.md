@@ -1,3 +1,4 @@
 ch08
 FUCK
-tired
+tire
+zhuanzheng
