@@ -5,21 +5,18 @@
 #include <iostream>
 #include <string>
 #include <cctype>
-#include <vector>
 using namespace std;
 
 int main(){
 
-    string str("hello,world");
+    string str("hello,World");
     for(string::iterator it = str.begin(); it != str.end(); ++it) {
-        *it = toupper(*it);
+        if (isupper(*it)) {
+            str.erase(it);
+            --it;
+        }
     }
     cout << str << endl;
-
-    cout << "----------" <<endl;
-    vector<char> vec(10,'a');
-    string str1(vec.begin(), vec.end());
-    cout << str1 <<endl;
     return 0;
 
 }
